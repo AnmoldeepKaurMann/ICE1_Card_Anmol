@@ -23,6 +23,9 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]); // Random suit
             magicHand[i] = c;
         }
+        Card luckyCard = new Card();
+            luckyCard.setValue(7); 
+            luckyCard.setSuit("Hearts");
         
         // Print the magic hand
         System.out.println("Magic Hand:");
