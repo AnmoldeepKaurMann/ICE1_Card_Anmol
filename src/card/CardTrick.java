@@ -11,23 +11,27 @@ import java.util.Scanner;
  */
 public class CardTrick {
     
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         
         // Fill magicHand with random cards
-        for (int i = 0; i < magicHand.length; i++)
-        {
+        for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue(random.nextInt(13) + 1); // Random value between 1 and 13
             c.setSuit(Card.SUITS[random.nextInt(4)]); // Random suit
             magicHand[i] = c;
         }
         
+        // Print the magic hand
+        System.out.println("Magic Hand:");
+        for (Card card : magicHand) {
+            System.out.println(card.getSuit() + " " + card.getValue());
+        }
+        
         // Ask the user to input a card value and suit
-        System.out.print("Enter a card value (1-13): ");
+        System.out.print("\nEnter a card value (1-13): ");
         int userValue = scanner.nextInt();
         System.out.print("Enter a suit (0-3 where 0-Hearts, 1-Diamonds, 2-Clubs, 3-Spades): ");
         int userSuit = scanner.nextInt();
