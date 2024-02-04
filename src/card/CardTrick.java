@@ -27,6 +27,12 @@ public class CardTrick {
         Card luckyCard = new Card();
             luckyCard.setValue(7); 
             luckyCard.setSuit("Hearts");
+
+        // Printing the values
+        System.out.println("------------- Hard-coded luckyCard values: -----------------------");
+        System.out.println("Value: " + luckyCard.getValue());
+        System.out.println("Suit: " + luckyCard.getSuit());
+        System.out.println("------------------------------------------------------------------");
         
         // Print the magic hand
         System.out.println("Magic Hand:");
